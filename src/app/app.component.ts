@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { WeatherService } from './service/weather.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +9,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'openWeather';
+  weather :any[]=[]
+
+  constructor(private weatherService : WeatherService){
+
+  }
+
+  ngOnInit(){ 
+   this.weatherService.getWeather().subscribe(r =>{
+     this.weather.push(r)
+      console.log(r)
+    })
+  }
+
+  showWeather(){
+    
+  }
 }
