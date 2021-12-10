@@ -3,10 +3,10 @@
       <div class="details">
         <div class="temperature">{{w.wind.gust}}°</div>
         <div class="summary">
-          <p class="summaryText">{{w.name}}</p>
-          <p class="summaryText"> {{hours}}</p>
+          <p class="summaryText">{{w.name}} - {{w.weather[0].main}}</p>
+          <p class="summaryText">{{hours}}</p>
         </div>
-        <div class="precipitation">{{w.weather[0].main}} - {{w.weather[0].description}}</div>
+        <div class="precipitation">Precipitation : {{w.weather.main}}</div>
         <div class="wind">Wind : {{w.wind.speed}}</div>
       </div>
       <div class="pictoBackdrop"></div>
