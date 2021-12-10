@@ -1,3 +1,22 @@
-<div *ngFor="let w of weather">
-    {{w.name}}
-</div>
+<div class="container">
+    <div class="widget" *ngFor="let w of weather">
+      <div class="details">
+        <div class="temperature">20°</div>
+        <div class="summary">
+          <p class="summaryText">{{w.name}}</p>
+          <p class="summaryText">{{w.weather[0].description}}</p>
+        </div>
+        <div class="precipitation">Precipitation: 20%</div>
+        <div class="wind">Wind: 3 mph</div>
+      </div>
+      <div class="pictoBackdrop"></div>
+      <div class="pictoFrame"></div>
+      <div class="pictoCloudBig"></div>
+      <div class="pictoCloudFill"></div>
+      <div class="pictoCloudSmall"></div>
+      <div class="iconCloudBig"></div>
+      <div class="iconCloudFill"></div>
+      <div class="iconCloudSmall"></div>
+    </div>
+  </div>
+  
