@@ -9,7 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'openWeather';
+  //Déclaration d'un tableau weather
   weather :any[]=[]
+  //Date d'aujourd'hui
+  d = new Date();
+  date = this.d.getFullYear()+'-'+(this.d.getMonth()+1)+'-'+this.d.getDate();
+  //Heure d'aujourd'hui
+  hours = this.d.getHours() + ":" + this.d.getMinutes();
+
+
 
   constructor(private weatherService : WeatherService){
 
@@ -22,7 +30,4 @@ export class AppComponent {
     })
   }
 
-  showWeather(){
-    
-  }
 }

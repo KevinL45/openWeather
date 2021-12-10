@@ -1,13 +1,13 @@
 <div class="container">
     <div class="widget" *ngFor="let w of weather">
       <div class="details">
-        <div class="temperature">20°</div>
+        <div class="temperature">{{w.wind.gust}}°</div>
         <div class="summary">
           <p class="summaryText">{{w.name}}</p>
-          <p class="summaryText">{{w.weather[0].description}}</p>
+          <p class="summaryText"> {{hours}}</p>
         </div>
-        <div class="precipitation">Precipitation: 20%</div>
-        <div class="wind">Wind: 3 mph</div>
+        <div class="precipitation">{{w.weather[0].main}} - {{w.weather[0].description}}</div>
+        <div class="wind">Wind : {{w.wind.speed}}</div>
       </div>
       <div class="pictoBackdrop"></div>
       <div class="pictoFrame"></div>
